@@ -140,10 +140,11 @@ export class E2ERoom extends Emitter {
 
 	disable() {
                 //Add feature to check permissions before allowing disable.
-                if (this.state === E2ERoomState.READY) {
-                        return;
-                }
-		this.setState(E2ERoomState.READY);
+                // (this.state === E2ERoomState.READY) {
+                //        return;
+                //}
+		//this.setState(E2ERoomState.READY);
+		this.setState(E2ERoomState.DISABLED);
 	}
 
 	pause() {

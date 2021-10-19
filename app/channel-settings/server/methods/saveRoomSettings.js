@@ -68,7 +68,7 @@ const validators = {
 				});
 			}
 
-			if (room.t !== 'd' && !hasPermission(userId, 'toggle-room-e2e-encryption', rid)) {
+			if ( !hasPermission(userId, 'toggle-room-e2e-encryption', rid)) {
 				throw new Meteor.Error('error-action-not-allowed', 'You do not have permission to toggle E2E encryption', {
 					method: 'saveRoomSettings',
 					action: 'Change_Room_Encrypted',
